@@ -1,0 +1,54 @@
+{
+    "bodyTemplate6Data": {
+        "type": "object",
+        "objectId": "bt6Sample",
+        "backgroundImage": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+                {
+                    "url1": "https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+                    "url": "https://wallpaperplay.com/walls/full/2/0/8/13986.jpg#.Xsz7Zjc-lYU.link",
+                    "size": "small",
+                    "widthPixels": 0,
+                    "heightPixels": 0
+                },
+                {
+                    "url1": "https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+                     "url": "https://wallpaperplay.com/walls/full/2/0/8/13986.jpg#.Xsz7Zjc-lYU.link",
+                    "size": "large",
+                    "widthPixels": 0,
+                    "heightPixels": 0
+                }
+            ]
+        },
+        "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+                {
+                    "url": "http://images.media-allrecipes.com/userphotos/250x250/303241.jpg",
+                    "size": "small",
+                    "widthPixels": 0,
+                    "heightPixels": 0
+                },
+                {
+                    "url": "http://images.media-allrecipes.com/userphotos/250x250/303241.jpg",
+                    "size": "large",
+                    "widthPixels": 0,
+                    "heightPixels": 0
+                }
+            ]
+        },
+        "textContent": {
+            "primaryText": {
+                "type": "PlainText",
+                "text": "Welcome to Health App"
+            }
+        },
+        "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png",
+        "hintText": "Try, \"Alexa, exit to quit the app\""
+    }
+  }
