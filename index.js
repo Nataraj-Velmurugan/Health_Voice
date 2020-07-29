@@ -996,3 +996,6 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addResponseInterceptors(ResponseLog)
     .lambda();
 
+
+
+    // arn:aws:lambda:us-east-1:605561328681:function:d7714bbf-8f9f-493e-97fa-56d884ce60f4:Release_0
