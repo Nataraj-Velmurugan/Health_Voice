@@ -240,6 +240,20 @@ const WalkthroughBlockIntentHandler = {
     }
 };
 
+const InfoBlockVersionIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InfoBlockVersionIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = 'Hello World';
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
 const InfoTainBlockIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -269,7 +283,7 @@ const InfoTainBlockIntentHandler = {
             + sessionAttributes.userData.userName +
             "<br>" + "Thanks for contacting Neuro APP." + "<br>" + "<br>" + "your posted question -->" + "<br>" + "<br>" + "<br>" + dynaTrain + "<br>" + "<br>" + "We will be reverting with 72 hours as promised!!." + "<br>" + "<br>" + "Thanks," + "<br> " + "Alexa Neuro APP" + "</p>"
 
-        await main(mail1, modifiedInfos).catch(console.error);
+        // await main(mail1, modifiedInfos).catch(console.error);
 
         const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
 
@@ -434,11 +448,11 @@ const AlphaIntentHandler = {
     },
     handle(handlerInput) {
 
-        // const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        // sessionAttributes.blockStatus = {
-        //     mentalStability: true
-        // }
-        // handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        sessionAttributes.blockStatus = {
+            mentalStability: true
+        }
+        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
 
         const speakOutput = '<speak>Hi nithin.<break time="1s"/>This block walks you through questions to understand your mental stability<break time="1.5s"/> . Through this section we should have a fairly decent idea how stable your mind is and suggest you ways and means to monitor them.<break time="1.5s"/> .Can we proceed?</speak>';
 
@@ -976,6 +990,7 @@ exports.handler = Alexa.SkillBuilders.custom()
         HelloWorldIntentHandler,
         NeuroIntentHandler,
         WalkthroughBlockIntentHandler,
+        InfoBlockVersionIntentHandler,
         InfoTainBlockIntentHandler,
         ProfessionIntentHandler,
         TimeOneIntentHandler,
