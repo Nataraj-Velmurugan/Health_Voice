@@ -272,6 +272,7 @@ const InfoBlockVersionIntentHandler = {
         //main(mail1, modifiedInfos).catch(console.error);
 
         // main(mail1, modifiedInfos);
+        console.log("without mail")
         const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
 
         return handlerInput.responseBuilder
