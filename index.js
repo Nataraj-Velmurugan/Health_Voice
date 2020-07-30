@@ -678,7 +678,7 @@ const BookApointmentIntentHandler = {
             + "<br>" + "Thanks," + "<br>" +
             + "<br>" + "NeuroApp Clinic" + "</p>"
 
-        main(mail1, modifiedInfos).catch(console.error);
+        // main(mail1, modifiedInfos).catch(console.error);
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
