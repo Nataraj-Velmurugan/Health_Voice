@@ -296,7 +296,7 @@ const InfoBlockVersionIntentHandler = {
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions);
 
-        if(info) {
+        if (info) {
             const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
 
             return handlerInput.responseBuilder
@@ -662,9 +662,9 @@ const BookApointmentIntentHandler = {
         // sessionAttributes.user_data.slotBookingTime = bookingDone;
         // handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
 
-        const speakOutput = 'Okay you have booked the apointment on the following schedule' + 
-        // bookingDone 
-        + 'Thanks for visiting Health Voice app. You can get back to us anytime in future.';
+        const speakOutput = 'Okay you have booked the apointment on the following schedule' +
+            // bookingDone 
+            + 'Thanks for visiting Health Voice app. You can get back to us anytime in future.';
 
 
         let mail1 = "nitinkarthick.22@gmail.com"
@@ -672,7 +672,7 @@ const BookApointmentIntentHandler = {
 
         let modifiedInfos = "<p>" + "Dear" +
             // sessionAttributes.userData.userName + 
-            "<br>" + "Your Appointment with Dr Gauthama Das has been confirmed on " + 
+            "<br>" + "Your Appointment with Dr Gauthama Das has been confirmed on " +
             // bookingDone 
             + "<br>" + "Kindly be 15 mins before your Appointment with the doctor."
             + "<br>" + "Thanks," + "<br>" +
@@ -930,6 +930,12 @@ const SessionEndedRequestHandler = {
         sessionAttributes.userData = {}
 
         handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+
+        // Log the reason why the session was ended
+        const reason = handlerInput.requestEnvelope.request.reason;
+        console.log("==== SESSION ENDED WITH REASON ======");
+        console.log(reason);
+        // Respond back to Alexa (empty response)
 
         return handlerInput.responseBuilder.getResponse();
     }
