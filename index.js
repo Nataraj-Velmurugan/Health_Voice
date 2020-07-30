@@ -259,7 +259,7 @@ const InfoBlockVersionIntentHandler = {
         console.log(dynaTrain)
         console.log(typeof dynaTrain)
 
-         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         // sessionAttributes.blockStatus = {
         //     mentalStability: true
         // }
@@ -272,13 +272,44 @@ const InfoBlockVersionIntentHandler = {
         //main(mail1, modifiedInfos).catch(console.error);
 
         // main(mail1, modifiedInfos);
-        console.log("without mail")
-        const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
 
-        return handlerInput.responseBuilder
-        .speak(speakOutput)
-        .reprompt('add a reprompt if you want to keep the session open for the user to respond')
-        .getResponse();
+        // create reusable transporter object using the default SMTP transport
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            host: 'smtp.gmail.com',
+            auth: {
+                user: 'testingu675@gmail.com',
+                pass: 'tu@123456'
+                // user: 'testalexa000@gmail.com',
+                // pass: 'ta@123456'
+            }
+        });
+
+        let mailOptions = {
+            from: 'testingu675@gmail.com', // sender address
+            to: emailID, // list of receivers
+            subject: "Repost From Neuro Centre--", // Subject line
+            text: data, // plain text body
+            html: "<b>" + data + "</b>", // html body
+        }
+
+        // send mail with defined transport object
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error)
+            } else {
+                const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
+
+                return handlerInput.responseBuilder
+                    .speak(speakOutput)
+                    .reprompt('add a reprompt if you want to keep the session open for the user to respond')
+                    .getResponse();
+            }
+
+        });
+
+
+
 
     }
 };
@@ -498,7 +529,7 @@ const PainIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'PainIntent';
     },
     handle(handlerInput) {
-      
+
         sessionAttributes.blockStatus = {
             anexity: true
         }
@@ -506,7 +537,7 @@ const PainIntentHandler = {
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         sessionAttributes.user_data.painType = duraMode;
         handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
-        
+
         const speakOutput = 'Hello Pain!';
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -522,12 +553,12 @@ const AnexIntentHandler = {
     },
     handle(handlerInput) {
 
-      const duraPain = Alexa.getSlotValue(requestEnvelope, 'duraPain');
-      let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-      sessionAttributes.user_data.diseaseType = duraPain;
-      handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+        const duraPain = Alexa.getSlotValue(requestEnvelope, 'duraPain');
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        sessionAttributes.user_data.diseaseType = duraPain;
+        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
 
-      const speakOutput = 'Hello Anex!';
+        const speakOutput = 'Hello Anex!';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt('add a reprompt if you want to keep the session open for the user to respond')
@@ -544,27 +575,27 @@ const ResultOneIntentHandler = {
         const speakOutput = '<speak>You are going through chronic anxiety and its essential to visit the doctor as early as possible<break time="2.5s"/>. You might need to book an appointment with the doctor right away!</speak>';
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         let e_mail = sessionAttributes.userData.userEmail;
-        let sleepTiming =  sessionAttributes.userData.sleepTiming;
-        let officeType= sessionAttributes.userData.officeType;
-        let painType= sessionAttributes.userData.painType;
-        let diseaseType= sessionAttributes.userData.diseaseType;
-        let slotBookingTime= sessionAttributes.userData.slotBookingTime;
+        let sleepTiming = sessionAttributes.userData.sleepTiming;
+        let officeType = sessionAttributes.userData.officeType;
+        let painType = sessionAttributes.userData.painType;
+        let diseaseType = sessionAttributes.userData.diseaseType;
+        let slotBookingTime = sessionAttributes.userData.slotBookingTime;
 
         var params = {
             TableName: "Health_App",
             Key: { "email_id": e_mail },
             UpdateExpression: "set updated_by = :byUser, is_deleted = :boolValue, sleepTiming = :sleep_Timing, officeType= :office_Type, painType= :pain_Type, diseaseType = :disease_Type , slotBookingTime = :slotBooking_Time",
             ExpressionAttributeValues: {
-              "sleep_Timing":sleepTiming,
-              "office_Type":officeType,
-              "pain_Type":painType,
-              "disease_Type":diseaseType,
-              "slotBooking_Time":slotBookingTime,
-              ":byUser": "updateUser",
-              ":boolValue": true
+                "sleep_Timing": sleepTiming,
+                "office_Type": officeType,
+                "pain_Type": painType,
+                "disease_Type": diseaseType,
+                "slotBooking_Time": slotBookingTime,
+                ":byUser": "updateUser",
+                ":boolValue": true
             },
             ReturnValues: "UPDATED_NEW"
-    
+
         };
 
         let updated = await updateDB(params);
