@@ -259,7 +259,7 @@ const InfoBlockVersionIntentHandler = {
         console.log(dynaTrain)
         console.log(typeof dynaTrain)
 
-        // const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         // sessionAttributes.blockStatus = {
         //     mentalStability: true
         // }
