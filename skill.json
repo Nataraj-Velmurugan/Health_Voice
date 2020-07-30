@@ -1,0 +1,936 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "health app",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NeuroIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{name}",
+                                "my name is {name}"
+                            ]
+                        },
+                        {
+                            "name": "mobile",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{mobile}",
+                                "my mobile number is {mobile}"
+                            ]
+                        },
+                        {
+                            "name": "email",
+                            "type": "AMAZON.Genre",
+                            "samples": [
+                                "{email}",
+                                "my email ID is {email}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Neuro",
+                        "I want to go ahead with neuro block"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AlphaIntent",
+                    "slots": [],
+                    "samples": [
+                        "mental stability"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ProfessionIntent",
+                    "slots": [
+                        {
+                            "name": "profession",
+                            "type": "dynamicProfession",
+                            "samples": [
+                                "{profession}",
+                                "my profession is {profession}"
+                            ]
+                        },
+                        {
+                            "name": "distro",
+                            "type": "dynamicHours",
+                            "samples": [
+                                "my sleep timing is {distro}",
+                                "{distro}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "profession"
+                    ]
+                },
+                {
+                    "name": "PainIntent",
+                    "slots": [
+                        {
+                            "name": "duraMode",
+                            "type": "AMAZON.Genre",
+                            "samples": [
+                                "{duraMode}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "higher pain"
+                    ]
+                },
+                {
+                    "name": "AnexIntent",
+                    "slots": [
+                        {
+                            "name": "duraPain",
+                            "type": "AMAZON.Genre",
+                            "samples": [
+                                "{duraPain}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "anexity drop"
+                    ]
+                },
+                {
+                    "name": "DecisionIntent",
+                    "slots": [
+                        {
+                            "name": "triago",
+                            "type": "AMAZON.Genre",
+                            "samples": [
+                                "{triago}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "thrust factor"
+                    ]
+                },
+                {
+                    "name": "InfoTainBlockIntent",
+                    "slots": [
+                        {
+                            "name": "dynaTrain",
+                            "type": "infoQuestion",
+                            "samples": [
+                                "{dynaTrain}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "info block super"
+                    ]
+                },
+                {
+                    "name": "TimeOneIntent",
+                    "slots": [
+                        {
+                            "name": "dynamicOne",
+                            "type": "dynamicTimeOne",
+                            "samples": [
+                                "{dynamicOne}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "time one"
+                    ]
+                },
+                {
+                    "name": "TimeThreeIntent",
+                    "slots": [
+                        {
+                            "name": "dynamicThree",
+                            "type": "dynamicTimeThree",
+                            "samples": [
+                                "{dynamicThree}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "time three"
+                    ]
+                },
+                {
+                    "name": "TimeGreaterIntent",
+                    "slots": [
+                        {
+                            "name": "dynamicGreater",
+                            "type": "dynamicTimeGreater",
+                            "samples": [
+                                "{dynamicGreater}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "time greater"
+                    ]
+                },
+                {
+                    "name": "ResultOneIntent",
+                    "slots": [],
+                    "samples": [
+                        "result one"
+                    ]
+                },
+                {
+                    "name": "ResultTwoIntent",
+                    "slots": [],
+                    "samples": [
+                        "result two"
+                    ]
+                },
+                {
+                    "name": "BookApointmentIntent",
+                    "slots": [
+                        {
+                            "name": "bookingDone",
+                            "type": "apointment_Booking",
+                            "samples": [
+                                "plesae book the apointment at {bookingDone}",
+                                "{bookingDone}",
+                                "i need to book on the time from {bookingDone}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "need to book an apointmemt",
+                        "book apointment",
+                        "yes please book an apointment",
+                        "i want to book an apointment"
+                    ]
+                },
+                {
+                    "name": "QuitIntent",
+                    "slots": [],
+                    "samples": [
+                        "please quit it",
+                        "quit the skill",
+                        "quit the app",
+                        "quit"
+                    ]
+                },
+                {
+                    "name": "WalkthroughBlockIntent",
+                    "slots": [],
+                    "samples": [
+                        "walk through block"
+                    ]
+                },
+                {
+                    "name": "InfoBlockVersionIntent",
+                    "slots": [
+                        {
+                            "name": "dynaTrain",
+                            "type": "infoQuestion",
+                            "samples": [
+                                "{dynaTrain}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "info block"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "dynamicProfession",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "not a big concern"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "moderately stressful"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "highly stressful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "dynamicHours",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "greater than six hours"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "more than six hours"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "three to six hours"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one to three hours"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "dynamicTimeOne",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "due to physical injury"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "deprived sleep owing to issues staying inside head overnight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "deprived sleep due to work nature and timings"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "dynamicTimeThree",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "tired and lazy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "good and energetic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mentally drained and tired"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "dynamicTimeGreater",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "not more than 8 hours daily "
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "beyond 8 hours of sleep daily ",
+                                "synonyms": [
+                                    "it is beyond  8 hours of sleep daily"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "apointment_Booking",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "seven pm to eight pm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "six pm to seven pm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "five pm to six pm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "infoQuestion",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "How does the chemicals in the brain work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Do we need external oxygen supply during night times if we suffer frequent phobia attack"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "food that affects the mental status positively"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Why is mental health neglected"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Does physical exercise have a positive effect on the brain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Does working late night affect our brain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Does meditation help in maintaining a proper brain activities"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "why do we get palpitation when we are scared"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "what is stress eating"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "What is addiction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "What is power napping"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "What is meant by restless leg syndrome"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "How is stress and anxiety related"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Does smoking affect the brain activities"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "What is the ideal time to sleep daily"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Why do people have scary dreams"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "what is parkinsons"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "what is Alzheimer disease does it come at young age"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": " What is meant by dementia"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "How long should one sleep for a good quality life"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I am also a slot"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "NeuroIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1492473679892.214443310751"
+                            }
+                        },
+                        {
+                            "name": "mobile",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1492473679892.1399795275045"
+                            }
+                        },
+                        {
+                            "name": "email",
+                            "type": "AMAZON.Genre",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1492473679892.358132895436"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ProfessionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "profession",
+                            "type": "dynamicProfession",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.530502973748.507445218112"
+                            }
+                        },
+                        {
+                            "name": "distro",
+                            "type": "dynamicHours",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.530502973748.970085183868"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PainIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "duraMode",
+                            "type": "AMAZON.Genre",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1057630048409.1065262909998"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AnexIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "duraPain",
+                            "type": "AMAZON.Genre",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.297181241510.21480220155"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DecisionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "triago",
+                            "type": "AMAZON.Genre",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1508839930273.1273762860457"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "InfoTainBlockIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dynaTrain",
+                            "type": "infoQuestion",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1354062839157.253123302001"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TimeOneIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dynamicOne",
+                            "type": "dynamicTimeOne",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1572932653421.788547011129"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TimeThreeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dynamicThree",
+                            "type": "dynamicTimeThree",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.885163418487.427660295872"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TimeGreaterIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dynamicGreater",
+                            "type": "dynamicTimeGreater",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.7866928332.882275266357"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BookApointmentIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "bookingDone",
+                            "type": "apointment_Booking",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1264168625263.204375253396"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "InfoBlockVersionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dynaTrain",
+                            "type": "infoQuestion",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.193252658066.821569463624"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1369048913948.822280879907",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "can i have your name please"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1492473679892.214443310751",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak> Welcome to the Neuro Section.<break time=\"1s\"/> Men,over years of evolution has grown multifolds<break time=\"0.5s\"/>. However, over the last few years it has become exponential that the brain and the neural system is under <emphasis level=\"moderate\">tremendous pressure</emphasis>. <break time=\"0.3s\"/>.This results in mental  diarrhoea.<break time=\"0.5s\"/>.We ,along this section, would try to reset or reboot the mental system trying to attain<emphasis level=\"moderate\">maximum potential</emphasis>with minimum stress of the brain!<break time=\"3s\"/>Before we proceed further, can i have your name please </speak> "
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1492473679892.1399795275045",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "can i have your mobile number please"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1492473679892.358132895436",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "can i have your email ID please"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.110685945815.451376853878",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "hello"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.530502973748.507445218112",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Great!!Understanding once mind is a big process and surely does not come with any manual! however , we over the years have understood the problems associated and have brought down some scenarios to map them.<break time=\"1s\"/> . The livelihood that we choose defines us and at the same time affects us. <break time=\"1s\"/>. What is the nature of your proffession. Your answers could be highly stressful<break time=\"0.5s\"/>  or moderately stressful <break time=\"0.5s\"/> or not a big concern</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.530502973748.970085183868",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Sleep has been something thats extremely underrated in the current generation<break time=\"1s\"/>We fail to understand the importance of sleep for a normal and efficient functioning of our body.<break time=\"1s\"/>how long do you sleep on a daily basis<break time=\"0.5s\"/>your answers could be 1 to 3 hours <break time=\"0.5s\"/> 3 to 6 hours <break time=\"0.5s\"/>or greater than 6 hours.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1057630048409.1065262909998",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Physical pain is much easily identified and accepted.<break time=\"0.5s\"/> but the mental struggles and pain are at time difficult to identify and make peace with.<break time=\"1s\"/> Are you having any unresolved issues which makes you bog down for years together<break time=\"0.5s\"/> your answer could be a simple yes or No.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1057630048409.296292750582",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Anxiety, and fear are considered normal human emotions if they stay for a shorter span of time.<break time=\"0.2s\"/>However, if they turn chronic, meaning continue to stay with you for days and weeks then the mental system gets affected quite often then not.<break time=\"0.5s\"/>Is there any chronic anxiety or fear that lingers always in yourself<break time=\"0.5s\"/>your answer could again be a simple yes or no.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.297181241510.21480220155",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Anxiety, and fear are considered normal human emotions if they stay for a shorter span of time.<break time=\"0.2s\"/>However, if they turn chronic, meaning continue to stay with you for days and weeks then the mental system gets affected quite often then not.<break time=\"0.5s\"/>Is there any chronic anxiety or fear that lingers always in yourself<break time=\"0.5s\"/>your answer could again be a simple yes or no.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1508839930273.1273762860457",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak> Great !! your mental condition seems to be stable. However, if you would want to have some discussion with the doc, you can go ahead and book an appointment! <break time=\"2.5s\"/>would you want to proceed </speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1349348351855.215054509186",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>This block is under construction.  <break time=\"1s\"/>If you have any questions that you would want to understand generally about mental health<break time=\"0.5s\"/> please do ask and we will be getting back within seventy two hours to your mail! </speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1572932653421.788547011129",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Hmmm ! we might have to have a look at it. <break time=\"0.5s\"/>Sleep debt is something that could arise sue to multiple reasons. <break time=\"0.5s\"/> It could be either the nature of your work and work load .or maybe you are facing some unresolved issues that is keeping your mind awake! <break time=\"0.5s\"/> Would you want to elaborate on your sleep issues<break time=\"0.5s\"/> your answers could be deprived sleep due to work nature and timings<break time=\"0.5s\"/> or deprived sleep owing to issues staying inside head overnight<break time=\"0.5s\"/>or due to physical injury </speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.885163418487.427660295872",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Sleep quality looks a little insufficient.<break time=\"0.5s\"/>. How do you feel post getting up the next morning<break time=\"0.5s\"/> your answers could be good and energitic<break time=\"0.5s\"/> or tired and lazy <break time=\"0.5s\"/> or mentally drained and tired.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.7866928332.882275266357",
+                "variations": [
+                    {
+                        "type": "SSML",
+                        "value": "<speak>Well well! you fall under a healthy sleep chart . <break time=\"0.5s\"/> However if you are sleeping beyond 8-9 hours every single day. you might want to check a dietician and bring in proper fitness regime into your life.<break time=\"0.5s\"/> You can respond saying that you sleep is not more than 8  hours daily  or it is beyond  8 hours of sleep daily.</speak>"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1264168625263.204375253396",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please book the time at which you are fine, these are the slots available. The timings are five pm to six pm, six pm to seven pm, seven pm to eight pm"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1354062839157.253123302001",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please ask your question"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.193252658066.821569463624",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please ask you question"
+                    }
+                ]
+            }
+        ]
+    }
+}
