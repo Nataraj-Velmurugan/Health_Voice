@@ -11,7 +11,8 @@ const template = require('./templates/main.json');
 let awsConfig = {
     "region": "ap-south-1",
     "endpoint": "http://dynamodb.ap-south-1.amazonaws.com",
-    "accessKeyId": "AKIAIUIMI7T2Y5UHJ4NA", "secretAccessKey": "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"
+    "accessKeyId": "AKIAIUIMI7T2Y5UHJ4NA", 
+    "secretAccessKey": "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"
 };
 AWS.config.update(awsConfig);
 
@@ -275,14 +276,9 @@ const InfoBlockVersionIntentHandler = {
 
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
-            service: 'gmail',
-            host: 'smtp.gmail.com',
-            auth: {
-                user: 'testingu675@gmail.com',
-                pass: 'tu@123456'
-                // user: 'testalexa000@gmail.com',
-                // pass: 'ta@123456'
-            }
+            SES: new AWS.SES({
+                apiVersion: '2010-12-01'
+            })
         });
 
         let mailOptions = {
