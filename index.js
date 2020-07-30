@@ -434,11 +434,11 @@ const AlphaIntentHandler = {
     },
     handle(handlerInput) {
 
-        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        sessionAttributes.blockStatus = {
-            mentalStability: true
-        }
-        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+        // const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        // sessionAttributes.blockStatus = {
+        //     mentalStability: true
+        // }
+        // handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
 
         const speakOutput = '<speak>Hi nithin.<break time="1s"/>This block walks you through questions to understand your mental stability<break time="1.5s"/> . Through this section we should have a fairly decent idea how stable your mind is and suggest you ways and means to monitor them.<break time="1.5s"/> .Can we proceed?</speak>';
 
