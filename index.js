@@ -656,13 +656,15 @@ const BookApointmentIntentHandler = {
         const { requestEnvelope, responseBuilder } = handlerInput;
         const { intent } = requestEnvelope.request;
 
-        let bookingDone = Alexa.getSlotValue(requestEnvelope, 'bookingDone');
+        // let bookingDone = Alexa.getSlotValue(requestEnvelope, 'bookingDone');
 
-        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        sessionAttributes.user_data.slotBookingTime = bookingDone;
-        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+        // let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        // sessionAttributes.user_data.slotBookingTime = bookingDone;
+        // handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
 
-        const speakOutput = 'Okay you have booked the apointment on the following schedule' + bookingDone + 'Thanks for visiting Health Voice app. You can get back to us anytime in future.';
+        const speakOutput = 'Okay you have booked the apointment on the following schedule' + 
+        // bookingDone 
+        + 'Thanks for visiting Health Voice app. You can get back to us anytime in future.';
 
 
         let mail1 = "nitinkarthick.22@gmail.com"
@@ -670,7 +672,9 @@ const BookApointmentIntentHandler = {
 
         let modifiedInfos = "<p>" + "Dear" +
             // sessionAttributes.userData.userName + 
-            "<br>" + "Your Appointment with Dr Gauthama Das has been confirmed on " + bookingDone + "<br>" + "Kindly be 15 mins before your Appointment with the doctor."
+            "<br>" + "Your Appointment with Dr Gauthama Das has been confirmed on " + 
+            // bookingDone 
+            + "<br>" + "Kindly be 15 mins before your Appointment with the doctor."
             + "<br>" + "Thanks," + "<br>" +
             + "<br>" + "NeuroApp Clinic" + "</p>"
 
