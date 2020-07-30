@@ -271,14 +271,13 @@ const InfoBlockVersionIntentHandler = {
 
         //main(mail1, modifiedInfos).catch(console.error);
 
-        main(mail1, modifiedInfos).then(() => {
-            const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
+        // main(mail1, modifiedInfos);
+        const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
 
-            return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt('add a reprompt if you want to keep the session open for the user to respond')
-            .getResponse();
-        });
+        return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .reprompt('add a reprompt if you want to keep the session open for the user to respond')
+        .getResponse();
 
     }
 };
