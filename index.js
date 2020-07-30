@@ -81,6 +81,9 @@ function getPreviousBeforeIntent(attrs) {
 
 const maxHistorySize = 20;
 
+// testingu675
+// tu@123456
+
 async function main(emailID, data) {
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
@@ -91,14 +94,16 @@ async function main(emailID, data) {
         service: 'gmail',
         host: 'smtp.gmail.com',
         auth: {
-            user: 'testalexa000@gmail.com',
-            pass: 'ta@123456'
+            user: 'testingu675@gmail.com',
+            pass: 'tu@123456'
+            // user: 'testalexa000@gmail.com',
+            // pass: 'ta@123456'
         }
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: 'testalexa000@gmail.com', // sender address
+        from: 'testingu675@gmail.com', // sender address
         to: emailID, // list of receivers
         subject: "Repost From Neuro Centre--", // Subject line
         text: data, // plain text body
@@ -245,14 +250,14 @@ const InfoTainBlockIntentHandler = {
         const { requestEnvelope, responseBuilder } = handlerInput;
         const { intent } = requestEnvelope.request;
 
-        let dynaInfo = Alexa.getSlotValue(requestEnvelope, 'dynaInfo');
+        let dynaTrain = Alexa.getSlotValue(requestEnvelope, 'dynaTrain');
 
         let mail1 = "nitinkarthick.22@gmail.com"
         let mail = 'testalexa000@gmail.com';
 
-        console.log("dynaInfo")
-        console.log(dynaInfo)
-        console.log(typeof dynaInfo)
+        console.log("dynaTrain")
+        console.log(dynaTrain)
+        console.log(typeof dynaTrain)
 
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         sessionAttributes.blockStatus = {
@@ -262,7 +267,7 @@ const InfoTainBlockIntentHandler = {
 
         let modifiedInfos = "<p>" + "Hi "
             + sessionAttributes.userData.userName +
-            "<br>" + "Thanks for contacting Neuro APP." + "<br>" + "<br>" + "your posted question -->" + "<br>" + "<br>" + "<br>" + dynaInfo + "<br>" + "<br>" + "We will be reverting with 72 hours as promised!!." + "<br>" + "<br>" + "Thanks," + "<br> " + "Alexa Neuro APP" + "</p>"
+            "<br>" + "Thanks for contacting Neuro APP." + "<br>" + "<br>" + "your posted question -->" + "<br>" + "<br>" + "<br>" + dynaTrain + "<br>" + "<br>" + "We will be reverting with 72 hours as promised!!." + "<br>" + "<br>" + "Thanks," + "<br> " + "Alexa Neuro APP" + "</p>"
 
         main(mail1, modifiedInfos).catch(console.error);
 
