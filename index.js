@@ -245,8 +245,38 @@ const InfoBlockVersionIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InfoBlockVersionIntent';
     },
-    handle(handlerInput) {
-        const speakOutput = 'Hello World';
+    async handle(handlerInput) {
+
+        const { requestEnvelope, responseBuilder } = handlerInput;
+        const { intent } = requestEnvelope.request;
+
+        let dynaTrain = Alexa.getSlotValue(requestEnvelope, 'dynaTrain');
+
+        let mail1 = "nitinkarthick.22@gmail.com"
+        let mail = 'testalexa000@gmail.com';
+
+        console.log("dynaTrain")
+        console.log(dynaTrain)
+        console.log(typeof dynaTrain)
+
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        sessionAttributes.blockStatus = {
+            mentalStability: true
+        }
+        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+
+        let modifiedInfos = "<p>" + "Hi "
+            + sessionAttributes.userData.userName +
+            "<br>" + "Thanks for contacting Neuro APP." + "<br>" + "<br>" + "your posted question -->" + "<br>" + "<br>" + "<br>" + dynaTrain + "<br>" + "<br>" + "We will be reverting with 72 hours as promised!!." + "<br>" + "<br>" + "Thanks," + "<br> " + "Alexa Neuro APP" + "</p>"
+
+        // await main(mail1, modifiedInfos).catch(console.error);
+
+        const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
+
+        let say = 'inside';
+
+
+        const speakOutput = say;
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt('add a reprompt if you want to keep the session open for the user to respond')
