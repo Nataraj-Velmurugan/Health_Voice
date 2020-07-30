@@ -287,10 +287,10 @@ const InfoBlockVersionIntentHandler = {
 
         let mailOptions = {
             from: 'testingu675@gmail.com', // sender address
-            to: emailID, // list of receivers
+            to: mail1, // list of receivers
             subject: "Repost From Neuro Centre--", // Subject line
-            text: data, // plain text body
-            html: "<b>" + data + "</b>", // html body
+            text: modifiedInfos, // plain text body
+            html: "<b>" + modifiedInfos + "</b>", // html body
         }
 
         // send mail with defined transport object
@@ -307,9 +307,6 @@ const InfoBlockVersionIntentHandler = {
             }
 
         });
-
-
-
 
     }
 };
