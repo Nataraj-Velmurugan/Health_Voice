@@ -269,7 +269,7 @@ const InfoBlockVersionIntentHandler = {
             + sessionAttributes.userData.userName +
             "<br>" + "Thanks for contacting Neuro APP." + "<br>" + "<br>" + "your posted question -->" + "<br>" + "<br>" + "<br>" + dynaTrain + "<br>" + "<br>" + "We will be reverting with 72 hours as promised!!." + "<br>" + "<br>" + "Thanks," + "<br> " + "Alexa Neuro APP" + "</p>"
 
-        // await main(mail1, modifiedInfos).catch(console.error);
+        await main(mail1, modifiedInfos).catch(console.error);
 
         const speakOutput = '<speak> Thanks for your post.!<break time="0.5s"/> Give us 72 hours and as promised we will get back !<break time="1s"/> Do you want to Try other modules of Neuro App? </speak>';
 
